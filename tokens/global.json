@@ -1,0 +1,48 @@
+{
+  "global": {
+    "color": {
+      "background": {
+        "value": "#FFFFFF",
+        "type": "color"
+      },
+      "foreground": {
+        "value": "#000000",
+        "type": "color"
+      },
+      "primary": {
+        "value": "#4F46E5",
+        "type": "color"
+      },
+      "onPrimary": {
+        "value": "#FFFFFF",
+        "type": "color"
+      }
+    },
+    "font": {
+      "size": {
+        "body": {
+          "value": "16px",
+          "type": "fontSizes"
+        }
+      },
+      "weight": {
+        "medium": {
+          "value": "500",
+          "type": "fontWeights"
+        }
+      }
+    },
+    "radius": {
+      "md": {
+        "value": "8px",
+        "type": "borderRadius"
+      }
+    }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "global"
+    ]
+  }
+}
