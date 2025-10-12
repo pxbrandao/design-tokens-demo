@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "tokens/global.json" # only triggers when tokens change
+      - "tokens/global.json" # trigger only when token source changes
   workflow_dispatch: # optional manual trigger
 
 jobs:
@@ -23,15 +23,18 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
         run: |
           cd demo-token-app
-          npm ci
+          pnpm install --frozen-lockfile
 
       - name: Build tokens
         run: |
           cd demo-token-app
-          node build-tokens.js
+          pnpm exec node build-tokens.js
 
       - name: Commit updated token files
         run: |
