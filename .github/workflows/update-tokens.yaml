@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - "tokens/global.json" # Trigger when this file changes
+      - "tokens/global.json" # only triggers when tokens change
+  workflow_dispatch: # optional manual trigger
 
 jobs:
   build-and-commit:
@@ -23,13 +24,18 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          cd demo-token-app
+          npm ci
 
       - name: Build tokens
-        run: node build-tokens.js
+        run: |
+          cd demo-token-app
+          node build-tokens.js
 
       - name: Commit updated token files
         run: |
+          cd demo-token-app
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -39,4 +45,3 @@ jobs:
             git push
           else
             echo "No changes to commit"
-          fi
