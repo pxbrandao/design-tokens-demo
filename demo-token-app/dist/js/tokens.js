@@ -4,8 +4,8 @@
 
 export const GlobalColorBackground = "#ffffff";
 export const GlobalColorForeground = "#000000";
-export const GlobalColorPrimary = "#a24cc2";
-export const GlobalColorOnPrimary = "#ffffff";
+export const GlobalColorPrimary = "#ff06b5";
+export const GlobalColorOnPrimary = "#fdf800";
 export const GlobalFontSizeBody = "16px";
 export const GlobalFontWeightMedium = "500";
 export const GlobalRadiusMd = "8px";
