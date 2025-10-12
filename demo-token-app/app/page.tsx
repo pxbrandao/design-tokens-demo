@@ -1,3 +1,4 @@
+import ThemeToggle from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -99,7 +100,8 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer> */}
-      <div className="bg-[var(--global-color-primary)] text-on-primary p-4 rounded-md">
+      <ThemeToggle></ThemeToggle>
+      <div className="bg-[var(--global-color-primary)] text-[var(--global-color-on-primary)] p-4 rounded-md">
         Works now
       </div>
     </div>
