@@ -1,5 +1,10 @@
 "use client"
+
 import { useState } from "react"
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
 
 export function LoginCard() {
   const [username, setUsername] = useState("")
@@ -11,34 +16,48 @@ export function LoginCard() {
   }
 
   return (
-    <form
-      onSubmit={handleLogin}
-      className="max-w-sm mx-auto p-6 rounded-md shadow-lg bg-background text-foreground"
-    >
-      <h2 className="text-2xl font-medium mb-4">Login</h2>
+    <Card className="">
+      <form onSubmit={handleLogin}>
+        <CardHeader>
+          <CardTitle className="text-2xl font-semibold">Login</CardTitle>
+        </CardHeader>
 
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        className="w-full mb-3 px-4 py-2 rounded-md border border-foreground bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-      />
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="username">Username</Label>
+            <Input
+              id="username"
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
 
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        className="w-full mb-4 px-4 py-2 rounded-md border border-foreground bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-      />
+          <div className="space-y-2">
+            <Label htmlFor="password">Password</Label>
+            <Input
+              id="password"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+        </CardContent>
 
-      <button className="w-full py-2 px-4 rounded-md bg-primary text-primary-foreground hover:brightness-90">
-        Login
-      </button>
-      <button className="w-full py-2 px-4 rounded-md bg-[var(--primary)] text-[var(--color-primary-foreground)] hover:brightness-90">
-        Login
-      </button>
-    </form>
+        <CardFooter className="flex flex-col gap-2">
+          <Button type="submit" className="w-full">
+            Login
+          </Button>
+          <Button
+            type="submit"
+            className="w-full bg-[var(--primary)] text-[var(--color-primary-foreground)] hover:brightness-90"
+          >
+            Login (Token Variant)
+          </Button>
+        </CardFooter>
+      </form>
+    </Card>
   )
 }
