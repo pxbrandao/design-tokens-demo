@@ -1,5 +1,6 @@
 import { ActionButtons } from "@/components/action-buttons"
 import { LoginCard } from "@/components/login-card"
+import SignInForm from "@/components/sign-in"
 import { StatsCard } from "@/components/stats-card"
 import { ThemeDemoCard } from "@/components/theme-demo-card"
 import ThemeToggle from "@/components/theme-toggle"
@@ -14,6 +15,7 @@ export default function Home() {
       <ThemeDemoCard />
       <StatsCard />
       <ActionButtons />
+      <SignInForm />
     </div>
   )
 }
