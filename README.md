@@ -20,7 +20,6 @@ It includes:
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/), [tailwind-merge](https://tailwind-merge.vercel.app/), [tailwindcss-animate](https://tailwindcss.com/docs/animation)  
 - **Tokens & Theming:** [Style Dictionary](https://amzn.github.io/style-dictionary/#/), [Next Themes](https://github.com/pacocoursey/next-themes)  
 - **Icons:** [Lucide React](https://lucide.dev/)  
-- **Utilities:** [clsx](https://github.com/lukeed/clsx), [class-variance-authority](https://cva.style/)  
 - **Storybook:** [Storybook](https://storybook.js.org/) with addons for docs, accessibility, and testing  
 
 ## Features
