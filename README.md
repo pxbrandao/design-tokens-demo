@@ -3,10 +3,6 @@
 A demo application showcasing the use of **design tokens** in a modern React + Next.js setup.  
 This project demonstrates how to define, build, and consume design tokens in both **CSS and JavaScript**, including dark-mode support, reusable components, and theming.
 
-## Live Demo
-
-*(Optional: add link if deployed)*
-
 ## Overview
 
 This repository highlights a workflow for **design token management** using [Style Dictionary](https://amzn.github.io/style-dictionary/#/).  
